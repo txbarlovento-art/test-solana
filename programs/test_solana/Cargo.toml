@@ -1,0 +1,11 @@
+[package]
+name = "test_solana"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "test_solana"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+anchor-lang = "0.27.0"
