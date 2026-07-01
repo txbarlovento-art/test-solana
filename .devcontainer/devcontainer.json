@@ -1,0 +1,25 @@
+{
+    "name": "Solana Anchor Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "rust-lang.rust",
+                "serayuzgur.crates",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "formulahendry.auto-rename-tag"
+            ]
+        }
+    },
+    "forwardPorts": [8899, 8900, 5173],
+    "portsAttributes": {
+        "8899": { "label": "Solana Test Validator RPC", "onAutoForward": "notify", "visibility": "public" },
+        "5173": { "label": "Vite Dev Server", "onAutoForward": "notify", "visibility": "public" }
+    },
+    "postCreateCommand": "./.devcontainer/start-services.sh",
+    "remoteUser": "vscode"
+}
