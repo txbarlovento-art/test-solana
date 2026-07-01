@@ -6,3 +6,5 @@ node_modules/
 /*.key
 /*.json
 *.so
+frontend/node_modules/
+frontend/dist/
